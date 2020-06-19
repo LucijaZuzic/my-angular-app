@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4><label for="search-box">Email Search</label></h4>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let user of users$ | async" >
+      <a routerLink="/detail/{{user.id}}">
+        {{user.email}}
+      </a>
+    </li>
+  </ul>
+</div>
+
+<button (click)="goBack()">go back</button>
