@@ -1,5 +1,4 @@
 <div *ngIf="user">
-
 	<h2>{{user.first_name | uppercase}} {{user.last_name | uppercase}} Details</h2>
 	<div><span>id: </span>{{user.id}}</div>
 	<div>
@@ -21,15 +20,17 @@
 	  <label>avatar:
 		<input [(ngModel)]="user.avatar" placeholder="avatar"/>
 	  </label>
+	</div>
 	<div>
-	  <img src={{user.avatar}}>
-	 </div>
+	  <img src={{user.avatar}} alt={{user.avatar}}>
 	</div>
-	</div>
+	<div>
 		<button (click)="save()">save</button>
-	<div>
 	</div>
-		<button (click)="delete()">delete</button>
 	<div>
-    <button (click)="goBack()">go back</button>
+		<button (click)="delete()">delete</button>
+	</div>
+	<div>
+		<button (click)="goBack()">go back</button>
+	</div>
 </div>

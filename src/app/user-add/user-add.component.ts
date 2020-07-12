@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 })
 export class UserAddComponent implements OnInit {
 		
-	users: User[];
+	users: User[] = [];
 	
 	constructor(private userService: UserService) { }
 
